@@ -647,3 +647,86 @@ button, input, select { font-family: inherit; }
   background: var(--rose);
 }
 
+
+/* ===== Site header / auth ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem clamp(1.25rem, 5vw, 2.5rem) 0;
+}
+
+.site-brand { font-weight: 700; color: var(--rose-dark); text-decoration: none; }
+
+.auth-status { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+
+.auth-name { color: var(--muted); font-size: 0.95rem; }
+
+.avatar { width: 32px; height: 32px; border-radius: 50%; }
+
+.product-actions a.btn-icon { text-decoration: none; text-align: center; }
+.product-actions form { display: contents; }
+.toolbar a.btn, .toolbar-actions a.btn { text-decoration: none; display: inline-flex; align-items: center; }
+.page-subtitle a { color: var(--rose-dark); }
+
+/* ===== Delete confirm dialog ===== */
+.btn-danger {
+  background: #E5484D;
+  color: var(--white);
+}
+.btn-danger:hover:not(:disabled) { background: #C93A3F; }
+
+.confirm-dialog {
+  width: 100%;
+  max-width: 400px;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 2rem 1.75rem 1.5rem;
+  text-align: center;
+  box-shadow:
+    0 24px 64px rgba(32, 53, 45, 0.28),
+    0 0 0 1px rgba(32, 53, 45, 0.04);
+  animation: modalPopIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.confirm-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #FDECEC;
+  color: #E5484D;
+  box-shadow: 0 0 0 8px #FEF6F6;
+}
+
+.confirm-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.confirm-text {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.confirm-text strong { color: var(--ink); font-weight: 600; }
+
+.confirm-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.confirm-actions .btn { width: 100%; padding: 0.75rem 1rem; }

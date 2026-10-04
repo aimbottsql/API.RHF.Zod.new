@@ -1,27 +1,40 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SORT_FIELDS, SearchQuerySchema, defaultQuery } from "@/lib/products";
+import { SORT_FIELDS, SearchQuerySchema } from "@/lib/products";
 import type { SearchQuery } from "@/lib/products";
 
 type ProductSearchFormProps = {
-  onSearch: (query: SearchQuery) => Promise<void>;
+  initialQuery: SearchQuery;
 };
 
-export default function ProductSearchForm({ onSearch }: ProductSearchFormProps) {
+// Client Component: ตรวจฟอร์มด้วย Zod แล้วเปลี่ยน URL
+// หน้า Server Component จะอ่านค่าจาก searchParams แล้วค้นหาฝั่ง server
+export default function ProductSearchForm({ initialQuery }: ProductSearchFormProps) {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<SearchQuery>({
     resolver: zodResolver(SearchQuerySchema),
     mode: "onTouched",
-    defaultValues: defaultQuery,
+    defaultValues: initialQuery,
   });
 
+  function search(query: SearchQuery) {
+    const params = new URLSearchParams({
+      q: query.q,
+      limit: String(query.limit),
+      sortBy: query.sortBy,
+    });
+    router.push(`/?${params.toString()}`);
+  }
+
   return (
-    <form className="search-form" onSubmit={handleSubmit(onSearch)} noValidate>
+    <form className="search-form" onSubmit={handleSubmit(search)} noValidate>
       <input
         id="q"
         className="search-input"
@@ -48,9 +61,7 @@ export default function ProductSearchForm({ onSearch }: ProductSearchFormProps) 
         <span id="limit-error" className="field-error" role="alert">{errors.limit?.message}</span>
       </div>
 
-      <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
-        {isSubmitting ? "กำลังค้นหา" : "ค้นหา"}
-      </button>
+      <button type="submit" className="btn btn-primary">ค้นหา</button>
     </form>
   );
 }

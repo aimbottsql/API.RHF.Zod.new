@@ -1,35 +1,231 @@
 {
   "products": [
-    { "id": 1, "title": "Essence Mascara Lash Princess", "price": 9.99, "stock": 5, "category": "beauty", "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" },
-    { "id": 2, "title": "Eyeshadow Palette with Mirror", "price": 19.99, "stock": 44, "category": "beauty", "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png" },
-    { "id": 5, "title": "Red Lipstick", "price": 12.99, "stock": 34, "category": "beauty", "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png" },
-    { "id": 11, "title": "Annibale Colombo Bed", "price": 1899.99, "stock": 74, "category": "furniture", "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/thumbnail.png" },
-    { "id": 12, "title": "Annibale Colombo Sofa", "price": 2499.99, "stock": 91, "category": "furniture", "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png" },
-    { "id": 13, "title": "Bedside Table African Cherry", "price": 299.99, "stock": 88, "category": "furniture", "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/thumbnail.png" },
-    { "id": 19, "title": "Apple Watch Series 8", "price": 599.99, "stock": 20, "category": "mobile-accessories", "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Watch%20Series%208/thumbnail.png" },
-    { "id": 20, "title": "Beats Flex Wireless Earphones", "price": 49.99, "stock": 79, "category": "mobile-accessories", "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Beats%20Flex%20Wireless%20Earphones/thumbnail.png" },
-    { "id": 22, "title": "Beats Studio Buds", "price": 179.99, "stock": 74, "category": "mobile-accessories", "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Beats%20Studio%20Buds/thumbnail.png" },
-    { "id": 32, "title": "Apple Magic Mouse", "price": 99.99, "stock": 34, "category": "mobile-accessories", "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Magic%20Mouse/thumbnail.png" },
-    { "id": 41, "title": "Vanilla Essential Oil", "price": 11.99, "stock": 33, "category": "fragrances", "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Vanilla%20Essential%20Oil/thumbnail.png" },
-    { "id": 45, "title": "Dior J'adore", "price": 89.99, "stock": 79, "category": "fragrances", "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/thumbnail.png" },
-    { "id": 50, "title": "Al Munakh by Al Haramain", "price": 8.99, "stock": 79, "category": "fragrances", "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Al%20Munakh%20by%20Al%20Haramain/thumbnail.png" },
-    { "id": 63, "title": "Apple", "price": 1.99, "stock": 32, "category": "groceries", "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Apple/thumbnail.png" },
-    { "id": 65, "title": "Beef Steak", "price": 12.99, "stock": 96, "category": "groceries", "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Beef%20Steak/thumbnail.png" },
-    { "id": 70, "title": "Cooking Oil", "price": 4.99, "stock": 87, "category": "groceries", "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/thumbnail.png" },
-    { "id": 76, "title": "Green Chili Pepper", "price": 0.99, "stock": 44, "category": "groceries", "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Green%20Chili%20Pepper/thumbnail.png" },
-    { "id": 89, "title": "Handcrafted Wood Mirror", "price": 379.99, "stock": 40, "category": "home-decoration", "thumbnail": "https://cdn.dummyjson.com/products/images/home-decoration/Handcrafted%20Wood%20Mirror/thumbnail.png" },
-    { "id": 90, "title": "Handcrafted Wooden Cabinet", "price": 399.99, "stock": 21, "category": "home-decoration", "thumbnail": "https://cdn.dummyjson.com/products/images/home-decoration/Handcrafted%20Wooden%20Cabinet/thumbnail.png" },
-    { "id": 98, "title": "Vintage Rustic Wall Decoration", "price": 39.99, "stock": 25, "category": "home-decoration", "thumbnail": "https://cdn.dummyjson.com/products/images/home-decoration/Vintage%20Rustic%20Wall%20Decoration/thumbnail.png" },
-    { "id": 104, "title": "Table Lamp", "price": 79.99, "stock": 30, "category": "kitchen-accessories", "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Table%20Lamp/thumbnail.png" },
-    { "id": 108, "title": "Plant Hanger For Home", "price": 41.9, "stock": 65, "category": "kitchen-accessories", "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Plant%20Hanger%20For%20Home/thumbnail.png" },
-    { "id": 117, "title": "Apple MacBook Pro 14 Inch Space Grey", "price": 1999.99, "stock": 47, "category": "laptops", "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/thumbnail.png" },
-    { "id": 119, "title": "Asus Zenbook Pro Dual Screen Laptop", "price": 1899.99, "stock": 34, "category": "laptops", "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop/thumbnail.png" },
-    { "id": 121, "title": "HP Pavilion 15-DK1056WM", "price": 1099.99, "stock": 68, "category": "laptops", "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/HP%20Pavilion%2015-DK1056WM/thumbnail.png" },
-    { "id": 126, "title": "Gucci Bag", "price": 1249.99, "stock": 29, "category": "womens-bags", "thumbnail": "https://cdn.dummyjson.com/products/images/womens-bags/Gucci%20Bag/thumbnail.png" },
-    { "id": 131, "title": "Louis Vuitton Bag", "price": 1500, "stock": 60, "category": "womens-bags", "thumbnail": "https://cdn.dummyjson.com/products/images/womens-bags/Louis%20Vuitton%20Bag/thumbnail.png" },
-    { "id": 141, "title": "Puma Perfect Fit T-shirt", "price": 27.99, "stock": 46, "category": "tops", "thumbnail": "https://cdn.dummyjson.com/products/images/tops/Puma%20Perfect%20Fit%20T-shirt/thumbnail.png" },
-    { "id": 153, "title": "Aviator Sunglasses", "price": 25.99, "stock": 78, "category": "sunglasses", "thumbnail": "https://cdn.dummyjson.com/products/images/sunglasses/Aviator%20Sunglasses/thumbnail.png" },
-    { "id": 165, "title": "Amazon Echo Plus", "price": 99.99, "stock": 25, "category": "smartphones", "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Amazon%20Echo%20Plus/thumbnail.png" }
+    {
+      "id": 1,
+      "title": "Essence Mascara Lash Princess",
+      "price": 9.99,
+      "stock": 5,
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
+    },
+    {
+      "id": 2,
+      "title": "Eyeshadow Palette with Mirror",
+      "price": 19.99,
+      "stock": 44,
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp"
+    },
+    {
+      "id": 5,
+      "title": "Red Lipstick",
+      "price": 12.99,
+      "stock": 34,
+      "category": "beauty",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/thumbnail.webp"
+    },
+    {
+      "id": 11,
+      "title": "Annibale Colombo Bed",
+      "price": 1899.99,
+      "stock": 74,
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp"
+    },
+    {
+      "id": 12,
+      "title": "Annibale Colombo Sofa",
+      "price": 2499.99,
+      "stock": 91,
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp"
+    },
+    {
+      "id": 13,
+      "title": "Bedside Table African Cherry",
+      "price": 299.99,
+      "stock": 88,
+      "category": "furniture",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp"
+    },
+    {
+      "id": 19,
+      "title": "Apple Watch Series 8",
+      "price": 599.99,
+      "stock": 20,
+      "category": "mobile-accessories"
+    },
+    {
+      "id": 20,
+      "title": "Beats Flex Wireless Earphones",
+      "price": 49.99,
+      "stock": 79,
+      "category": "mobile-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/thumbnail.webp"
+    },
+    {
+      "id": 22,
+      "title": "Beats Studio Buds",
+      "price": 179.99,
+      "stock": 74,
+      "category": "mobile-accessories"
+    },
+    {
+      "id": 32,
+      "title": "Apple Magic Mouse",
+      "price": 99.99,
+      "stock": 34,
+      "category": "mobile-accessories"
+    },
+    {
+      "id": 41,
+      "title": "Vanilla Essential Oil",
+      "price": 11.99,
+      "stock": 33,
+      "category": "fragrances"
+    },
+    {
+      "id": 45,
+      "title": "Dior J'adore",
+      "price": 89.99,
+      "stock": 79,
+      "category": "fragrances",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp"
+    },
+    {
+      "id": 50,
+      "title": "Al Munakh by Al Haramain",
+      "price": 8.99,
+      "stock": 79,
+      "category": "fragrances"
+    },
+    {
+      "id": 63,
+      "title": "Apple",
+      "price": 1.99,
+      "stock": 32,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/apple/thumbnail.webp"
+    },
+    {
+      "id": 65,
+      "title": "Beef Steak",
+      "price": 12.99,
+      "stock": 96,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/beef-steak/thumbnail.webp"
+    },
+    {
+      "id": 70,
+      "title": "Cooking Oil",
+      "price": 4.99,
+      "stock": 87,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/cooking-oil/thumbnail.webp"
+    },
+    {
+      "id": 76,
+      "title": "Green Chili Pepper",
+      "price": 0.99,
+      "stock": 44,
+      "category": "groceries",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/green-chili-pepper/thumbnail.webp"
+    },
+    {
+      "id": 89,
+      "title": "Handcrafted Wood Mirror",
+      "price": 379.99,
+      "stock": 40,
+      "category": "home-decoration"
+    },
+    {
+      "id": 90,
+      "title": "Handcrafted Wooden Cabinet",
+      "price": 399.99,
+      "stock": 21,
+      "category": "home-decoration"
+    },
+    {
+      "id": 98,
+      "title": "Vintage Rustic Wall Decoration",
+      "price": 39.99,
+      "stock": 25,
+      "category": "home-decoration"
+    },
+    {
+      "id": 104,
+      "title": "Table Lamp",
+      "price": 79.99,
+      "stock": 30,
+      "category": "kitchen-accessories",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/home-decoration/table-lamp/thumbnail.webp"
+    },
+    {
+      "id": 108,
+      "title": "Plant Hanger For Home",
+      "price": 41.9,
+      "stock": 65,
+      "category": "kitchen-accessories"
+    },
+    {
+      "id": 117,
+      "title": "Apple MacBook Pro 14 Inch Space Grey",
+      "price": 1999.99,
+      "stock": 47,
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp"
+    },
+    {
+      "id": 119,
+      "title": "Asus Zenbook Pro Dual Screen Laptop",
+      "price": 1899.99,
+      "stock": 34,
+      "category": "laptops",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/thumbnail.webp"
+    },
+    {
+      "id": 121,
+      "title": "HP Pavilion 15-DK1056WM",
+      "price": 1099.99,
+      "stock": 68,
+      "category": "laptops"
+    },
+    {
+      "id": 126,
+      "title": "Gucci Bag",
+      "price": 1249.99,
+      "stock": 29,
+      "category": "womens-bags"
+    },
+    {
+      "id": 131,
+      "title": "Louis Vuitton Bag",
+      "price": 1500,
+      "stock": 60,
+      "category": "womens-bags"
+    },
+    {
+      "id": 141,
+      "title": "Puma Perfect Fit T-shirt",
+      "price": 27.99,
+      "stock": 46,
+      "category": "tops"
+    },
+    {
+      "id": 153,
+      "title": "Aviator Sunglasses",
+      "price": 25.99,
+      "stock": 78,
+      "category": "sunglasses"
+    },
+    {
+      "id": 165,
+      "title": "Amazon Echo Plus",
+      "price": 99.99,
+      "stock": 25,
+      "category": "smartphones",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/thumbnail.webp"
+    }
   ],
   "total": 30,
   "skip": 0,

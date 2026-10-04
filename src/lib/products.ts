@@ -74,7 +74,7 @@ export function buildProductUrl(query: SearchQuery): string {
   params.set("order", "asc");
   params.set("select", "title,price,stock,category,thumbnail"); 
   
-  let url = `${API_BASE}/products/search?${params.toString()}`;
+  const url = `${API_BASE}/products/search?${params.toString()}`;
   console.log("เรียก URL:", url); 
   return url;
 } 
