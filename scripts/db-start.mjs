@@ -4,11 +4,12 @@
 import { existsSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import EmbeddedPostgres from "embedded-postgres";
+import { LOCAL_DATABASE_URL } from "./env.mjs";
 
 const DATA_DIR = ".postgres-data";
 const PORT = 5433;
 const DATABASE = "product_explorer";
-const DATABASE_URL = `postgresql://postgres:postgres@localhost:${PORT}/${DATABASE}`;
+const DATABASE_URL = LOCAL_DATABASE_URL;
 
 const pg = new EmbeddedPostgres({
   databaseDir: DATA_DIR,

@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "db:setup": "node --env-file=.env.local scripts/db-setup.mjs",
+    "db:setup": "node scripts/db-setup.mjs",
     "db:start": "node scripts/db-start.mjs",
-    "db:export": "node --env-file=.env.local scripts/db-export.mjs"
+    "db:export": "node scripts/db-export.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

@@ -3,14 +3,10 @@
 // รัน: npm run db:export  (ต้องเปิด npm run db:start ค้างไว้)
 import { writeFile } from "node:fs/promises";
 import pg from "pg";
-
-if (!process.env.DATABASE_URL) {
-  console.error("ไม่พบ DATABASE_URL ใน .env.local");
-  process.exit(1);
-}
+import { connectOrExplain } from "./env.mjs";
 
 const client = new pg.Client({ connectionString: process.env.DATABASE_URL });
-await client.connect();
+await connectOrExplain(client);
 
 try {
   const { rows } = await client.query(

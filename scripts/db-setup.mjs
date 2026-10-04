@@ -4,16 +4,12 @@
 import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import pg from "pg";
-
-if (!process.env.DATABASE_URL) {
-  console.error("ไม่พบ DATABASE_URL ใน .env.local");
-  process.exit(1);
-}
+import { connectOrExplain } from "./env.mjs";
 
 const SEED_SQL = new URL("../db/seed.sql", import.meta.url);
 
 const client = new pg.Client({ connectionString: process.env.DATABASE_URL });
-await client.connect();
+await connectOrExplain(client);
 
 try {
   await client.query(await readFile(new URL("../db/schema.sql", import.meta.url), "utf8"));
