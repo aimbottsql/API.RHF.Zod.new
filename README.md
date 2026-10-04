@@ -166,4 +166,5 @@ npm run dev
 | `ECONNREFUSED ...:5433` | ยังไม่ได้รัน `npm run db:start` หรือปิด terminal นั้นไปแล้ว |
 | `ECONNREFUSED ...:5432` | PostgreSQL ที่ติดตั้งเอง (วิธี ข) ยังไม่ได้เปิด (ดูใน Services ของ Windows) |
 | รูปสินค้าบางชิ้นขึ้น "ไม่มีรูปภาพ" | ปกติ: สินค้านั้นไม่มีรูปบน dummyjson หรือ URL รูปเสีย |
+| หน้าเว็บโหลดนาน/ค้าง เมื่อเปิดผ่าน IP เช่น `http://172.18.224.1:3000` | ให้เปิด **http://localhost:3000** แทน (ลิงก์ "Local" ไม่ใช่ "Network") — Google login ใช้ได้เฉพาะ localhost |
 | `Missing required parameter: client_id` | ยังไม่ได้ใส่ `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET` |
