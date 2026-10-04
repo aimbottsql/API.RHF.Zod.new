@@ -38,27 +38,21 @@
 > **อัปเดตข้อมูลให้คนอื่น:** รัน `npm run db:export` (ต้องเปิด `db:start` ค้างไว้) แล้ว commit ไฟล์ `db/seed.sql`
 > ข้อมูลจาก seed.sql จะถูกนำเข้าเฉพาะตอนที่ตารางยังว่าง ถ้าเครื่องปลายทางมีข้อมูลอยู่แล้ว ให้ปิด `db:start` ลบโฟลเดอร์ `.postgres-data` แล้วรัน `npm run db:start` ใหม่
 
-## ติดตั้ง PostgreSQL ผ่าน terminal (Windows)
+## ติดตั้ง PostgreSQL ผ่าน terminal ของ VS Code (Windows)
 
-ติดตั้ง PostgreSQL ตัวจริงลงเครื่องครั้งเดียว ฐานข้อมูลจะเปิดเองทุกครั้งที่เปิดคอม ไม่ต้องรัน `npm run db:start`
+ติดตั้ง PostgreSQL ตัวจริงลงเครื่องด้วยคำสั่งเดียว ฐานข้อมูลจะเปิดเองทุกครั้งที่เปิดคอม ไม่ต้องรัน `npm run db:start`
 
-1. เปิด **PowerShell แบบ Run as Administrator** (กดปุ่ม Start → พิมพ์ PowerShell → คลิกขวา → Run as administrator) แล้วรัน
-   ```powershell
-   winget install -e --id PostgreSQL.PostgreSQL.17 --override "--mode unattended --superpassword postgres --serverport 5432"
-   ```
-   รอจนขึ้น `Successfully installed` (ใช้เวลาประมาณ 2–5 นาที) ซึ่งจะตั้งรหัสผ่านของ user `postgres` เป็น `postgres`
-2. ใน `.env.local` ตั้งค่า
-   ```env
-   DATABASE_URL="postgresql://postgres:postgres@localhost:5432/product_explorer"
-   ```
-3. กลับไปที่ terminal ในโฟลเดอร์โปรเจกต์ (ไม่ต้องเป็น admin) แล้วรัน
+1. ใน VS Code กด `Ctrl + `` เพื่อเปิด terminal (ในโฟลเดอร์โปรเจกต์) แล้วรัน
    ```bash
-   npm run db:setup   # สร้างฐานข้อมูล product_explorer + ตาราง + ใส่สินค้าจาก db/seed.sql ให้อัตโนมัติ
+   npm run db:install
+   ```
+   - ถ้ามีหน้าต่าง **"Do you want to allow this app to make changes to your device?"** ขึ้นมา ให้กด **Yes**
+   - รอประมาณ 2–5 นาที คำสั่งนี้จะติดตั้ง PostgreSQL 17 ผ่าน winget (รหัสผ่าน user `postgres` = `postgres`, port 5432) ตั้งค่า `DATABASE_URL` ใน `.env.local` สร้างฐานข้อมูลและตาราง แล้วใส่สินค้าจาก `db/seed.sql`
+   - ถ้าเครื่องมี PostgreSQL ที่ port 5432 อยู่แล้ว จะข้ามขั้นติดตั้งให้เอง
+2. รันเว็บ
+   ```bash
    npm run dev
    ```
-
-ตรวจว่า PostgreSQL ทำงานอยู่ไหม: `Get-Service postgresql*` (ต้องขึ้น `Running`)
-ถ้าไม่ทำงาน: `Start-Service postgresql-x64-17` (PowerShell แบบ admin)
 
 ## วิธีติดตั้งและรัน (ละเอียด)
 
