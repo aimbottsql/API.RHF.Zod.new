@@ -8,6 +8,26 @@ import { connectOrExplain } from "./env.mjs";
 
 const SEED_SQL = new URL("../db/seed.sql", import.meta.url);
 
+// ถ้ายังไม่มีฐานข้อมูล (เช่นเพิ่งติดตั้ง PostgreSQL) ให้สร้างให้อัตโนมัติ
+async function ensureDatabase() {
+  const url = new URL(process.env.DATABASE_URL);
+  const name = decodeURIComponent(url.pathname.slice(1));
+  url.pathname = "/postgres";
+  const admin = new pg.Client({ connectionString: url.toString() });
+  await connectOrExplain(admin);
+  try {
+    const { rowCount } = await admin.query("SELECT 1 FROM pg_database WHERE datname = $1", [name]);
+    if (rowCount === 0) {
+      await admin.query(`CREATE DATABASE ${pg.escapeIdentifier(name)}`);
+      console.log(`สร้างฐานข้อมูล ${name} เรียบร้อย`);
+    }
+  } finally {
+    await admin.end();
+  }
+}
+
+await ensureDatabase();
+
 const client = new pg.Client({ connectionString: process.env.DATABASE_URL });
 await connectOrExplain(client);
 

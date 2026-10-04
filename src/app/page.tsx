@@ -4,6 +4,7 @@ import DeleteProductButton from "@/components/DeleteProductButton";
 import ProductImage from "@/components/ProductImage";
 import ProductSearchForm from "@/components/ProductSearchForm";
 import { SearchQuerySchema, defaultQuery } from "@/lib/products";
+import { explainDbError } from "@/lib/db";
 import { searchProducts } from "@/lib/product-store";
 
 // Server Component: ทุกคนดูรายการสินค้าได้
@@ -25,8 +26,9 @@ export default async function Home({ searchParams }: PageProps<"/">) {
   try {
     products = await searchProducts(query);
   } catch (error) {
-    console.error(error);
-    dbError = error instanceof Error ? error.message : "เชื่อมต่อฐานข้อมูลไม่ได้";
+    // log เป็นข้อความ ไม่ส่ง error ดิบ (AggregateError ทำให้ dev overlay ของ Next ล่ม)
+    dbError = explainDbError(error);
+    console.error(`[db] ${dbError}`);
   }
 
   return (
