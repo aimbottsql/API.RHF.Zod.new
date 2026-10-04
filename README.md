@@ -13,7 +13,7 @@
 
 1. Clone และติดตั้ง
    ```bash
-   git clone https://github.com/Nestds/API.RHF.Zod.new.git
+   git clone https://github.com/aimbottsql/API.RHF.Zod.new.git
    cd API.RHF.Zod.new
    npm install
    ```
